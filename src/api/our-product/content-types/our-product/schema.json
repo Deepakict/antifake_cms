@@ -16,11 +16,6 @@
       "component": "homepage.hero",
       "repeatable": false
     },
-    "products": {
-      "type": "relation",
-      "relation": "oneToMany",
-      "target": "api::product.product"
-    },
     "articles": {
       "type": "relation",
       "relation": "oneToMany",

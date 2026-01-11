@@ -21,15 +21,30 @@
       "component": "about-us.about-description",
       "repeatable": false
     },
-    "ImageContant": {
-      "type": "component",
-      "component": "shared.image-contant",
-      "repeatable": false
-    },
     "OurTeam": {
       "type": "component",
       "component": "homepage.community",
       "repeatable": false
+    },
+    "FounderSection": {
+      "type": "component",
+      "component": "shared.card-item",
+      "repeatable": false
+    },
+    "RetailerSection": {
+      "type": "component",
+      "component": "shared.retailers-section",
+      "repeatable": false
+    },
+    "NewsletterSection": {
+      "type": "component",
+      "component": "shared.newsletter-cta",
+      "repeatable": false
+    },
+    "TestimonialSection": {
+      "type": "component",
+      "component": "homepage.testimonials-section",
+      "repeatable": true
     }
   }
 }

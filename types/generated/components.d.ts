@@ -246,7 +246,6 @@ export interface HomepageOurProductSection extends Struct.ComponentSchema {
     displayName: 'OurProductSection';
   };
   attributes: {
-    products: Schema.Attribute.Relation<'oneToMany', 'api::product.product'>;
     productTitle: Schema.Attribute.String;
   };
 }
@@ -257,7 +256,6 @@ export interface HomepageOurProducts extends Struct.ComponentSchema {
     displayName: 'Our Products';
   };
   attributes: {
-    products: Schema.Attribute.Relation<'oneToMany', 'api::product.product'>;
     sectionTitle: Schema.Attribute.String;
   };
 }
@@ -314,8 +312,6 @@ export interface OurProductsOurProducts extends Struct.ComponentSchema {
     displayName: 'ourProducts';
   };
   attributes: {
-    category: Schema.Attribute.Relation<'oneToMany', 'api::product.product'>;
-    products: Schema.Attribute.Relation<'oneToMany', 'api::product.product'>;
     showSearch: Schema.Attribute.Boolean;
     title: Schema.Attribute.String;
   };

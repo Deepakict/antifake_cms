@@ -7,11 +7,6 @@
   "attributes": {
     "sectionTitle": {
       "type": "string"
-    },
-    "products": {
-      "type": "relation",
-      "relation": "oneToMany",
-      "target": "api::product.product"
     }
   },
   "config": {}

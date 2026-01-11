@@ -16,10 +16,25 @@
       "component": "homepage.hero",
       "repeatable": false
     },
-    "ProductSection": {
+    "CardSection": {
       "type": "component",
-      "component": "about.featured-story",
+      "component": "shared.card-item",
       "repeatable": false
+    },
+    "ArticlesGridSection": {
+      "type": "component",
+      "component": "shared.articles-section-grid",
+      "repeatable": false
+    },
+    "RetailersSection": {
+      "type": "component",
+      "component": "shared.retailers-section",
+      "repeatable": false
+    },
+    "NewsletterSection": {
+      "type": "component",
+      "component": "shared.newsletter-cta",
+      "repeatable": true
     }
   }
 }

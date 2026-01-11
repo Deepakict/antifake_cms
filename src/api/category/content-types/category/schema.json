@@ -26,6 +26,21 @@
     },
     "description": {
       "type": "text"
+    },
+    "CategoryDetailSection": {
+      "type": "component",
+      "component": "shared.card-item",
+      "repeatable": false
+    },
+    "HowToUseSection": {
+      "type": "component",
+      "component": "shared.card-item",
+      "repeatable": false
+    },
+    "NewLetterSection": {
+      "type": "component",
+      "component": "shared.newsletter-cta",
+      "repeatable": false
     }
   }
 }

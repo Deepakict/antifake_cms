@@ -8,16 +8,6 @@
     "title": {
       "type": "string"
     },
-    "category": {
-      "type": "relation",
-      "relation": "oneToMany",
-      "target": "api::product.product"
-    },
-    "products": {
-      "type": "relation",
-      "relation": "oneToMany",
-      "target": "api::product.product"
-    },
     "showSearch": {
       "type": "boolean"
     }
