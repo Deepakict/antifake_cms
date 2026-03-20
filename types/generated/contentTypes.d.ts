@@ -713,16 +713,43 @@ export interface ApiCatalogProductCatalogProduct
     draftAndPublish: true;
   };
   attributes: {
+    applicationImage: Schema.Attribute.Media<'images'>;
+    applicationSteps: Schema.Attribute.Component<
+      'product.application-step',
+      true
+    >;
+    applicationStepsDetailed: Schema.Attribute.Component<
+      'product.detailed-step',
+      true
+    >;
+    applicationTitle: Schema.Attribute.String;
     bestSellers: Schema.Attribute.Boolean;
     bundle: Schema.Attribute.Relation<'oneToOne', 'api::bundle.bundle'>;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
     description: Schema.Attribute.RichText;
+    faqImage: Schema.Attribute.Media<'images'>;
+    faqs: Schema.Attribute.Component<'contact.faq-item', true>;
+    faqSubtitle: Schema.Attribute.String;
+    faqTitle: Schema.Attribute.String;
+    fullIngredientsList: Schema.Attribute.Text;
+    fullRoutineSteps: Schema.Attribute.Component<
+      'product.full-routine-step',
+      true
+    >;
+    fullRoutineSubtitle: Schema.Attribute.String;
+    fullRoutineTitle: Schema.Attribute.String;
+    heroAccordions: Schema.Attribute.Component<
+      'product.accordion-section',
+      true
+    >;
     images: Schema.Attribute.Media<
       'images' | 'files' | 'videos' | 'audios',
       true
     >;
+    ingredientsImage: Schema.Attribute.Media<'images'>;
+    ingredientsTitle: Schema.Attribute.String;
     isActive: Schema.Attribute.Boolean;
     items: Schema.Attribute.Component<'our-products.what-on-component', true>;
     limitedEdition: Schema.Attribute.Boolean;
@@ -732,12 +759,18 @@ export interface ApiCatalogProductCatalogProduct
       'api::catalog-product.catalog-product'
     > &
       Schema.Attribute.Private;
+    prepSteps: Schema.Attribute.Component<'product.prep-step', true>;
+    prepStepsImage: Schema.Attribute.Media<'images'>;
+    prepStepsTitle: Schema.Attribute.String;
     productList: Schema.Attribute.Component<'shared.item-list', true>;
     productType: Schema.Attribute.Enumeration<['single', 'bundle']>;
     publishedAt: Schema.Attribute.DateTime;
     rating: Schema.Attribute.Decimal;
     ratingCount: Schema.Attribute.Integer;
+    results: Schema.Attribute.Component<'product.result-tab', true>;
+    routineSteps: Schema.Attribute.Component<'product.routine-step', true>;
     slug: Schema.Attribute.String;
+    subtitle: Schema.Attribute.String;
     title: Schema.Attribute.String;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
@@ -746,6 +779,10 @@ export interface ApiCatalogProductCatalogProduct
       'oneToMany',
       'api::product-variant.product-variant'
     >;
+    video: Schema.Attribute.Media<'videos' | 'files'>;
+    videoOverlayText: Schema.Attribute.String;
+    videoSubText: Schema.Attribute.String;
+    videoThumbnail: Schema.Attribute.Media<'images'>;
   };
 }
 

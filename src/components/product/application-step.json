@@ -1,0 +1,12 @@
+{
+  "collectionName": "components_product_application_steps",
+  "info": {
+    "displayName": "Application Step"
+  },
+  "options": {},
+  "attributes": {
+    "step": {
+      "type": "string"
+    }
+  }
+}

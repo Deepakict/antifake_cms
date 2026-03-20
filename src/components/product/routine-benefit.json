@@ -1,0 +1,12 @@
+{
+  "collectionName": "components_product_routine_benefits",
+  "info": {
+    "displayName": "Routine Benefit"
+  },
+  "options": {},
+  "attributes": {
+    "benefit": {
+      "type": "string"
+    }
+  }
+}

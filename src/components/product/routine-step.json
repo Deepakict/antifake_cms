@@ -1,0 +1,40 @@
+{
+  "collectionName": "components_product_routine_steps",
+  "info": {
+    "displayName": "Routine Step"
+  },
+  "options": {},
+  "attributes": {
+    "label": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "subtitle": {
+      "type": "string"
+    },
+    "benefits": {
+      "type": "component",
+      "component": "product.routine-benefit",
+      "repeatable": true
+    },
+    "routine": {
+      "type": "string"
+    },
+    "effect": {
+      "type": "string"
+    },
+    "ingredients": {
+      "type": "string"
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": ["images"]
+    },
+    "buyLabel": {
+      "type": "string"
+    }
+  }
+}

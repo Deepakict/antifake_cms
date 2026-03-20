@@ -1,0 +1,31 @@
+{
+  "collectionName": "components_product_full_routine_steps",
+  "info": {
+    "displayName": "Full Routine Step"
+  },
+  "options": {},
+  "attributes": {
+    "number": {
+      "type": "string"
+    },
+    "label": {
+      "type": "string"
+    },
+    "productName": {
+      "type": "string"
+    },
+    "productSubtitle": {
+      "type": "string"
+    },
+    "textureImage": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": ["images"]
+    },
+    "lifestyleImage": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": ["images"]
+    }
+  }
+}

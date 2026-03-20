@@ -328,6 +328,140 @@ export interface OurProductsWhatOnComponent extends Struct.ComponentSchema {
   };
 }
 
+export interface ProductAccordionItem extends Struct.ComponentSchema {
+  collectionName: 'components_product_accordion_items';
+  info: {
+    displayName: 'Accordion Item';
+  };
+  attributes: {
+    description: Schema.Attribute.String;
+    itemTitle: Schema.Attribute.String;
+    text: Schema.Attribute.String;
+  };
+}
+
+export interface ProductAccordionSection extends Struct.ComponentSchema {
+  collectionName: 'components_product_accordion_sections';
+  info: {
+    displayName: 'Accordion Section';
+  };
+  attributes: {
+    displayType: Schema.Attribute.Enumeration<
+      ['unordered', 'ordered', 'key_value']
+    > &
+      Schema.Attribute.DefaultTo<'unordered'>;
+    items: Schema.Attribute.Component<'product.accordion-item', true>;
+    title: Schema.Attribute.String;
+  };
+}
+
+export interface ProductApplicationStep extends Struct.ComponentSchema {
+  collectionName: 'components_product_application_steps';
+  info: {
+    displayName: 'Application Step';
+  };
+  attributes: {
+    step: Schema.Attribute.String;
+  };
+}
+
+export interface ProductDetailedStep extends Struct.ComponentSchema {
+  collectionName: 'components_product_detailed_steps';
+  info: {
+    displayName: 'Detailed Step';
+  };
+  attributes: {
+    description: Schema.Attribute.String;
+    image: Schema.Attribute.Media<'images'>;
+    title: Schema.Attribute.String;
+  };
+}
+
+export interface ProductFullRoutineStep extends Struct.ComponentSchema {
+  collectionName: 'components_product_full_routine_steps';
+  info: {
+    displayName: 'Full Routine Step';
+  };
+  attributes: {
+    label: Schema.Attribute.String;
+    lifestyleImage: Schema.Attribute.Media<'images'>;
+    number: Schema.Attribute.String;
+    productName: Schema.Attribute.String;
+    productSubtitle: Schema.Attribute.String;
+    textureImage: Schema.Attribute.Media<'images'>;
+  };
+}
+
+export interface ProductPrepStep extends Struct.ComponentSchema {
+  collectionName: 'components_product_prep_steps';
+  info: {
+    displayName: 'Prep Step';
+  };
+  attributes: {
+    description: Schema.Attribute.String;
+    image: Schema.Attribute.Media<'images'>;
+    title: Schema.Attribute.String;
+  };
+}
+
+export interface ProductResultStat extends Struct.ComponentSchema {
+  collectionName: 'components_product_result_stats';
+  info: {
+    displayName: 'Result Stat';
+  };
+  attributes: {
+    label: Schema.Attribute.String;
+    percentage: Schema.Attribute.String;
+  };
+}
+
+export interface ProductResultTab extends Struct.ComponentSchema {
+  collectionName: 'components_product_result_tabs';
+  info: {
+    displayName: 'Result Tab';
+  };
+  attributes: {
+    afterImage: Schema.Attribute.Media<'images'>;
+    afterLabel: Schema.Attribute.String;
+    author: Schema.Attribute.String;
+    beforeImage: Schema.Attribute.Media<'images'>;
+    beforeLabel: Schema.Attribute.String;
+    disclaimer: Schema.Attribute.String;
+    quote: Schema.Attribute.String;
+    stats: Schema.Attribute.Component<'product.result-stat', true>;
+    tabName: Schema.Attribute.String;
+    type: Schema.Attribute.Enumeration<['stats', 'quote']>;
+  };
+}
+
+export interface ProductRoutineBenefit extends Struct.ComponentSchema {
+  collectionName: 'components_product_routine_benefits';
+  info: {
+    displayName: 'Routine Benefit';
+  };
+  attributes: {
+    benefit: Schema.Attribute.String;
+  };
+}
+
+export interface ProductRoutineStep extends Struct.ComponentSchema {
+  collectionName: 'components_product_routine_steps';
+  info: {
+    displayName: 'Routine Step';
+  };
+  attributes: {
+    benefits: Schema.Attribute.Component<'product.routine-benefit', true>;
+    buyLabel: Schema.Attribute.String;
+    effect: Schema.Attribute.String;
+    image: Schema.Attribute.Media<'images'>;
+    ingredients: Schema.Attribute.String;
+    label: Schema.Attribute.String;
+    routine: Schema.Attribute.String;
+    subtitle: Schema.Attribute.String;
+    title: Schema.Attribute.String;
+  };
+}
+
 export interface SharedArticlesSectionGrid extends Struct.ComponentSchema {
   collectionName: 'components_shared_articles_section_grids';
   info: {
@@ -594,6 +728,16 @@ declare module '@strapi/strapi' {
       'homepage.testimonials-section': HomepageTestimonialsSection;
       'our-products.our-products': OurProductsOurProducts;
       'our-products.what-on-component': OurProductsWhatOnComponent;
+      'product.accordion-item': ProductAccordionItem;
+      'product.accordion-section': ProductAccordionSection;
+      'product.application-step': ProductApplicationStep;
+      'product.detailed-step': ProductDetailedStep;
+      'product.full-routine-step': ProductFullRoutineStep;
+      'product.prep-step': ProductPrepStep;
+      'product.result-stat': ProductResultStat;
+      'product.result-tab': ProductResultTab;
+      'product.routine-benefit': ProductRoutineBenefit;
+      'product.routine-step': ProductRoutineStep;
       'shared.articles-section-grid': SharedArticlesSectionGrid;
       'shared.card-item': SharedCardItem;
       'shared.footer-link': SharedFooterLink;

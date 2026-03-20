@@ -1,0 +1,46 @@
+{
+  "collectionName": "components_product_result_tabs",
+  "info": {
+    "displayName": "Result Tab"
+  },
+  "options": {},
+  "attributes": {
+    "tabName": {
+      "type": "string"
+    },
+    "type": {
+      "type": "enumeration",
+      "enum": ["stats", "quote"]
+    },
+    "stats": {
+      "type": "component",
+      "component": "product.result-stat",
+      "repeatable": true
+    },
+    "disclaimer": {
+      "type": "string"
+    },
+    "quote": {
+      "type": "string"
+    },
+    "author": {
+      "type": "string"
+    },
+    "beforeImage": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": ["images"]
+    },
+    "beforeLabel": {
+      "type": "string"
+    },
+    "afterImage": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": ["images"]
+    },
+    "afterLabel": {
+      "type": "string"
+    }
+  }
+}

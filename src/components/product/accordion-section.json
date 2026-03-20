@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_product_accordion_sections",
+  "info": {
+    "displayName": "Accordion Section"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "displayType": {
+      "type": "enumeration",
+      "enum": ["unordered", "ordered", "key_value"],
+      "default": "unordered"
+    },
+    "items": {
+      "type": "component",
+      "component": "product.accordion-item",
+      "repeatable": true
+    }
+  }
+}

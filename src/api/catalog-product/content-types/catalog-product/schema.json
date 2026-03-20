@@ -17,6 +17,9 @@
     "slug": {
       "type": "string"
     },
+    "subtitle": {
+      "type": "string"
+    },
     "productType": {
       "type": "enumeration",
       "enum": [
@@ -73,6 +76,106 @@
     },
     "ratingCount": {
       "type": "integer"
+    },
+    "heroAccordions": {
+      "type": "component",
+      "component": "product.accordion-section",
+      "repeatable": true
+    },
+    "applicationSteps": {
+      "type": "component",
+      "component": "product.application-step",
+      "repeatable": true
+    },
+    "video": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": ["videos", "files"]
+    },
+    "videoThumbnail": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": ["images"]
+    },
+    "videoOverlayText": {
+      "type": "string"
+    },
+    "videoSubText": {
+      "type": "string"
+    },
+    "prepSteps": {
+      "type": "component",
+      "component": "product.prep-step",
+      "repeatable": true
+    },
+    "prepStepsTitle": {
+      "type": "string"
+    },
+    "prepStepsImage": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": ["images"]
+    },
+    "applicationStepsDetailed": {
+      "type": "component",
+      "component": "product.detailed-step",
+      "repeatable": true
+    },
+    "applicationTitle": {
+      "type": "string"
+    },
+    "applicationImage": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": ["images"]
+    },
+    "ingredientsImage": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": ["images"]
+    },
+    "ingredientsTitle": {
+      "type": "string"
+    },
+    "fullIngredientsList": {
+      "type": "text"
+    },
+    "results": {
+      "type": "component",
+      "component": "product.result-tab",
+      "repeatable": true
+    },
+    "routineSteps": {
+      "type": "component",
+      "component": "product.routine-step",
+      "repeatable": true
+    },
+    "faqs": {
+      "type": "component",
+      "component": "contact.faq-item",
+      "repeatable": true
+    },
+    "faqImage": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": ["images"]
+    },
+    "faqTitle": {
+      "type": "string"
+    },
+    "faqSubtitle": {
+      "type": "string"
+    },
+    "fullRoutineTitle": {
+      "type": "string"
+    },
+    "fullRoutineSubtitle": {
+      "type": "string"
+    },
+    "fullRoutineSteps": {
+      "type": "component",
+      "component": "product.full-routine-step",
+      "repeatable": true
     }
   }
 }

@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_product_accordion_items",
+  "info": {
+    "displayName": "Accordion Item"
+  },
+  "options": {},
+  "attributes": {
+    "text": {
+      "type": "string"
+    },
+    "itemTitle": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    }
+  }
+}
