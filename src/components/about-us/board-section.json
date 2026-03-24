@@ -1,0 +1,20 @@
+{
+  "collectionName": "components_about_us_board_sections",
+  "info": {
+    "displayName": "BoardSection"
+  },
+  "options": {},
+  "attributes": {
+    "heading": {
+      "type": "string"
+    },
+    "subheading": {
+      "type": "text"
+    },
+    "members": {
+      "type": "component",
+      "component": "about-us.board-member",
+      "repeatable": true
+    }
+  }
+}

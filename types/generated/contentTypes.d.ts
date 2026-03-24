@@ -478,38 +478,34 @@ export interface ApiAboutUsAboutUs extends Struct.SingleTypeSchema {
     draftAndPublish: true;
   };
   attributes: {
+    BoardSection: Schema.Attribute.Component<'about-us.board-section', false>;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    DescriptionSection: Schema.Attribute.Component<
-      'about-us.about-description',
+    HeroSection: Schema.Attribute.Component<'homepage.hero', false>;
+    IngredientsSection: Schema.Attribute.Component<
+      'about-us.ingredients-section',
       false
     >;
-    FounderSection: Schema.Attribute.Component<'shared.card-item', false>;
-    HeroSection: Schema.Attribute.Component<'homepage.hero', false>;
+    IntentionalSection: Schema.Attribute.Component<
+      'about-us.about-intentional',
+      false
+    >;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
       'api::about-us.about-us'
     > &
       Schema.Attribute.Private;
-    NewsletterSection: Schema.Attribute.Component<
-      'shared.newsletter-cta',
+    PhilosophySection: Schema.Attribute.Component<
+      'about-us.about-description',
       false
     >;
-    OurTeam: Schema.Attribute.Component<'homepage.community', false>;
     publishedAt: Schema.Attribute.DateTime;
-    RetailerSection: Schema.Attribute.Component<
-      'shared.retailers-section',
-      false
-    >;
-    TestimonialSection: Schema.Attribute.Component<
-      'homepage.testimonials-section',
-      true
-    >;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
+    ValuesSection: Schema.Attribute.Component<'about-us.value-item', true>;
   };
 }
 

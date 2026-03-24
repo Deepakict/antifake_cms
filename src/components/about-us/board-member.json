@@ -1,0 +1,23 @@
+{
+  "collectionName": "components_about_us_board_members",
+  "info": {
+    "displayName": "BoardMember"
+  },
+  "options": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "role": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": ["images"]
+    }
+  }
+}

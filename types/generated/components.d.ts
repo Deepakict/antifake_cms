@@ -11,6 +11,80 @@ export interface AboutUsAboutDescription extends Struct.ComponentSchema {
   };
 }
 
+export interface AboutUsAboutIntentional extends Struct.ComponentSchema {
+  collectionName: 'components_about_us_about_intentionals';
+  info: {
+    displayName: 'AboutIntentional';
+  };
+  attributes: {
+    description: Schema.Attribute.Text;
+    image: Schema.Attribute.Media<'images'>;
+    title: Schema.Attribute.String;
+  };
+}
+
+export interface AboutUsBoardMember extends Struct.ComponentSchema {
+  collectionName: 'components_about_us_board_members';
+  info: {
+    displayName: 'BoardMember';
+  };
+  attributes: {
+    description: Schema.Attribute.Text;
+    image: Schema.Attribute.Media<'images'>;
+    name: Schema.Attribute.String;
+    role: Schema.Attribute.String;
+  };
+}
+
+export interface AboutUsBoardSection extends Struct.ComponentSchema {
+  collectionName: 'components_about_us_board_sections';
+  info: {
+    displayName: 'BoardSection';
+  };
+  attributes: {
+    heading: Schema.Attribute.String;
+    members: Schema.Attribute.Component<'about-us.board-member', true>;
+    subheading: Schema.Attribute.Text;
+  };
+}
+
+export interface AboutUsIngredientItem extends Struct.ComponentSchema {
+  collectionName: 'components_about_us_ingredient_items';
+  info: {
+    displayName: 'IngredientItem';
+  };
+  attributes: {
+    description: Schema.Attribute.Text;
+    image: Schema.Attribute.Media<'images'>;
+    name: Schema.Attribute.String;
+  };
+}
+
+export interface AboutUsIngredientsSection extends Struct.ComponentSchema {
+  collectionName: 'components_about_us_ingredients_sections';
+  info: {
+    displayName: 'IngredientsSection';
+  };
+  attributes: {
+    heading: Schema.Attribute.String;
+    items: Schema.Attribute.Component<'about-us.ingredient-item', true>;
+    subheading: Schema.Attribute.Text;
+  };
+}
+
+export interface AboutUsValueItem extends Struct.ComponentSchema {
+  collectionName: 'components_about_us_value_items';
+  info: {
+    displayName: 'ValueItem';
+  };
+  attributes: {
+    description: Schema.Attribute.Text;
+    heading: Schema.Attribute.String;
+    image: Schema.Attribute.Media<'images'>;
+    tabTitle: Schema.Attribute.String;
+  };
+}
+
 export interface AboutArticleSection extends Struct.ComponentSchema {
   collectionName: 'components_about_article_sections';
   info: {
@@ -706,6 +780,12 @@ declare module '@strapi/strapi' {
   export module Public {
     export interface ComponentSchemas {
       'about-us.about-description': AboutUsAboutDescription;
+      'about-us.about-intentional': AboutUsAboutIntentional;
+      'about-us.board-member': AboutUsBoardMember;
+      'about-us.board-section': AboutUsBoardSection;
+      'about-us.ingredient-item': AboutUsIngredientItem;
+      'about-us.ingredients-section': AboutUsIngredientsSection;
+      'about-us.value-item': AboutUsValueItem;
       'about.article-section': AboutArticleSection;
       'about.featured-story': AboutFeaturedStory;
       'about.filter-pill': AboutFilterPill;

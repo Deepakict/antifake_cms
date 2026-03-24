@@ -16,35 +16,30 @@
       "component": "homepage.hero",
       "repeatable": false
     },
-    "DescriptionSection": {
+    "PhilosophySection": {
       "type": "component",
       "component": "about-us.about-description",
       "repeatable": false
     },
-    "OurTeam": {
+    "IntentionalSection": {
       "type": "component",
-      "component": "homepage.community",
+      "component": "about-us.about-intentional",
       "repeatable": false
     },
-    "FounderSection": {
+    "ValuesSection": {
       "type": "component",
-      "component": "shared.card-item",
-      "repeatable": false
-    },
-    "RetailerSection": {
-      "type": "component",
-      "component": "shared.retailers-section",
-      "repeatable": false
-    },
-    "NewsletterSection": {
-      "type": "component",
-      "component": "shared.newsletter-cta",
-      "repeatable": false
-    },
-    "TestimonialSection": {
-      "type": "component",
-      "component": "homepage.testimonials-section",
+      "component": "about-us.value-item",
       "repeatable": true
+    },
+    "IngredientsSection": {
+      "type": "component",
+      "component": "about-us.ingredients-section",
+      "repeatable": false
+    },
+    "BoardSection": {
+      "type": "component",
+      "component": "about-us.board-section",
+      "repeatable": false
     }
   }
 }
