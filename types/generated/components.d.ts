@@ -296,10 +296,17 @@ export interface HomepageCommunitySection extends Struct.ComponentSchema {
     displayName: 'CommunityCard';
   };
   attributes: {
+    caption: Schema.Attribute.String;
     ctaIsExternal: Schema.Attribute.Boolean;
     ctaLabel: Schema.Attribute.String;
     ctaUrl: Schema.Attribute.String;
+    handle: Schema.Attribute.String;
     images: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    product: Schema.Attribute.Relation<
+      'oneToOne',
+      'api::catalog-product.catalog-product'
+    >;
+    videoUrl: Schema.Attribute.String;
   };
 }
 

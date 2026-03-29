@@ -5,6 +5,15 @@
   },
   "options": {},
   "attributes": {
+    "handle": {
+      "type": "string"
+    },
+    "caption": {
+      "type": "string"
+    },
+    "videoUrl": {
+      "type": "string"
+    },
     "ctaLabel": {
       "type": "string"
     },
@@ -23,6 +32,11 @@
         "videos",
         "audios"
       ]
+    },
+    "product": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::catalog-product.catalog-product"
     }
   },
   "config": {}
