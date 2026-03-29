@@ -16,15 +16,10 @@
       "component": "contact.form-block",
       "repeatable": false
     },
-    "faq": {
+    "quickLinks": {
       "type": "component",
-      "component": "contact.faq-section",
-      "repeatable": false
-    },
-    "support": {
-      "type": "component",
-      "component": "contact.support",
-      "repeatable": false
+      "component": "contact.quick-link",
+      "repeatable": true
     },
     "newLetterSection": {
       "type": "component",

@@ -1,17 +1,17 @@
 {
   "collectionName": "components_contact_form_blocks",
   "info": {
-    "displayName": "FormBlock"
+    "displayName": "Form Block"
   },
   "options": {},
   "attributes": {
     "sectionHeading": {
       "type": "string"
     },
-    "inputFirstNameLabel": {
+    "subtitle": {
       "type": "string"
     },
-    "inputLastNameLabel": {
+    "fullNameLabel": {
       "type": "string"
     },
     "inputEmailLabel": {
@@ -21,14 +21,6 @@
       "type": "string"
     },
     "buttonLabel": {
-      "type": "string"
-    },
-    "hero": {
-      "type": "component",
-      "component": "shared.media",
-      "repeatable": false
-    },
-    "title": {
       "type": "string"
     }
   },

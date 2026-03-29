@@ -1,0 +1,17 @@
+{
+  "collectionName": "components_contact_quick_links",
+  "info": {
+    "displayName": "Quick Link"
+  },
+  "options": {},
+  "attributes": {
+    "label": {
+      "type": "string",
+      "required": true
+    },
+    "content": {
+      "type": "text"
+    }
+  },
+  "config": {}
+}

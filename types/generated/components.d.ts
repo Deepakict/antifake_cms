@@ -199,17 +199,26 @@ export interface ContactFaqSection extends Struct.ComponentSchema {
 export interface ContactFormBlock extends Struct.ComponentSchema {
   collectionName: 'components_contact_form_blocks';
   info: {
-    displayName: 'FormBlock';
+    displayName: 'Form Block';
   };
   attributes: {
     buttonLabel: Schema.Attribute.String;
-    hero: Schema.Attribute.Component<'shared.media', false>;
+    fullNameLabel: Schema.Attribute.String;
     inputEmailLabel: Schema.Attribute.String;
-    inputFirstNameLabel: Schema.Attribute.String;
-    inputLastNameLabel: Schema.Attribute.String;
     inputMessageLabel: Schema.Attribute.String;
     sectionHeading: Schema.Attribute.String;
-    title: Schema.Attribute.String;
+    subtitle: Schema.Attribute.String;
+  };
+}
+
+export interface ContactQuickLink extends Struct.ComponentSchema {
+  collectionName: 'components_contact_quick_links';
+  info: {
+    displayName: 'Quick Link';
+  };
+  attributes: {
+    content: Schema.Attribute.Text;
+    label: Schema.Attribute.String & Schema.Attribute.Required;
   };
 }
 
@@ -794,6 +803,7 @@ declare module '@strapi/strapi' {
       'contact.faq-item': ContactFaqItem;
       'contact.faq-section': ContactFaqSection;
       'contact.form-block': ContactFormBlock;
+      'contact.quick-link': ContactQuickLink;
       'contact.support': ContactSupport;
       'contact.support-item': ContactSupportItem;
       'contact.support-section': ContactSupportSection;
