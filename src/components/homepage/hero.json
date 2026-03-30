@@ -17,8 +17,10 @@
     "primaryCtaLabel": {
       "type": "string"
     },
-    "primaryCtaUrl": {
-      "type": "string"
+    "ctaProduct": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::catalog-product.catalog-product"
     },
     "reviewBadge": {
       "type": "string"

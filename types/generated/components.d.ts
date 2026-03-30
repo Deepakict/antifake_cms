@@ -316,6 +316,10 @@ export interface HomepageHero extends Struct.ComponentSchema {
     displayName: 'Hero';
   };
   attributes: {
+    ctaProduct: Schema.Attribute.Relation<
+      'oneToOne',
+      'api::catalog-product.catalog-product'
+    >;
     eyebrow: Schema.Attribute.String;
     heroImage: Schema.Attribute.Media<
       'images' | 'files' | 'videos' | 'audios',
@@ -323,7 +327,6 @@ export interface HomepageHero extends Struct.ComponentSchema {
     >;
     InfoItems: Schema.Attribute.Component<'shared.item-list', true>;
     primaryCtaLabel: Schema.Attribute.String;
-    primaryCtaUrl: Schema.Attribute.String;
     reviewBadge: Schema.Attribute.String;
     subtitle: Schema.Attribute.Blocks;
     title: Schema.Attribute.String;
