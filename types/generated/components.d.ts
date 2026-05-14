@@ -207,6 +207,8 @@ export interface ContactFormBlock extends Struct.ComponentSchema {
     inputEmailLabel: Schema.Attribute.String;
     inputMessageLabel: Schema.Attribute.String;
     sectionHeading: Schema.Attribute.String;
+    subjectLabel: Schema.Attribute.String;
+    subjectOptions: Schema.Attribute.Text;
     subtitle: Schema.Attribute.String;
   };
 }
@@ -257,6 +259,19 @@ export interface ContactSupportSection extends Struct.ComponentSchema {
   attributes: {
     description: Schema.Attribute.String;
     title: Schema.Attribute.String;
+  };
+}
+
+export interface FaqFaqCategory extends Struct.ComponentSchema {
+  collectionName: 'components_faq_faq_categories';
+  info: {
+    displayName: 'FAQ Item';
+  };
+  attributes: {
+    answer: Schema.Attribute.Text & Schema.Attribute.Required;
+    category: Schema.Attribute.String;
+    categoryIcon: Schema.Attribute.String;
+    question: Schema.Attribute.String & Schema.Attribute.Required;
   };
 }
 
@@ -817,6 +832,7 @@ declare module '@strapi/strapi' {
       'contact.support': ContactSupport;
       'contact.support-item': ContactSupportItem;
       'contact.support-section': ContactSupportSection;
+      'faq.faq-category': FaqFaqCategory;
       'homepage.choose-us': HomepageChooseUs;
       'homepage.community': HomepageCommunity;
       'homepage.community-section': HomepageCommunitySection;

@@ -22,6 +22,12 @@
     },
     "buttonLabel": {
       "type": "string"
+    },
+    "subjectLabel": {
+      "type": "string"
+    },
+    "subjectOptions": {
+      "type": "text"
     }
   },
   "config": {}

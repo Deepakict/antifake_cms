@@ -1,0 +1,29 @@
+{
+  "kind": "singleType",
+  "collectionName": "faqs",
+  "info": {
+    "singularName": "faq",
+    "pluralName": "faqs",
+    "displayName": "FAQ"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "pageTitle": {
+      "type": "string"
+    },
+    "pageSubtitle": {
+      "type": "string"
+    },
+    "eyebrow": {
+      "type": "string"
+    },
+    "faqItems": {
+      "type": "component",
+      "component": "faq.faq-category",
+      "repeatable": true
+    }
+  }
+}
