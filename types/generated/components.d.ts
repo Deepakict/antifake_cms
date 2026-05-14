@@ -203,13 +203,17 @@ export interface ContactFormBlock extends Struct.ComponentSchema {
   };
   attributes: {
     buttonLabel: Schema.Attribute.String;
+    contactEmail: Schema.Attribute.String;
+    eyebrow: Schema.Attribute.String;
     fullNameLabel: Schema.Attribute.String;
     inputEmailLabel: Schema.Attribute.String;
     inputMessageLabel: Schema.Attribute.String;
+    responseTime: Schema.Attribute.String;
     sectionHeading: Schema.Attribute.String;
     subjectLabel: Schema.Attribute.String;
     subjectOptions: Schema.Attribute.Text;
     subtitle: Schema.Attribute.String;
+    workingHours: Schema.Attribute.String;
   };
 }
 

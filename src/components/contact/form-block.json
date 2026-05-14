@@ -28,6 +28,18 @@
     },
     "subjectOptions": {
       "type": "text"
+    },
+    "eyebrow": {
+      "type": "string"
+    },
+    "contactEmail": {
+      "type": "string"
+    },
+    "responseTime": {
+      "type": "string"
+    },
+    "workingHours": {
+      "type": "string"
     }
   },
   "config": {}
