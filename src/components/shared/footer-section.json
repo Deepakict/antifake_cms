@@ -5,44 +5,64 @@
   },
   "options": {},
   "attributes": {
-    "tagline": {
+    "newsletterHeadline": {
+      "type": "string"
+    },
+    "newsletterSubtext": {
       "type": "text"
     },
-    "shopTitle": {
+    "newsletterDisclaimer": {
+      "type": "text"
+    },
+    "emailPlaceholder": {
       "type": "string"
+    },
+    "phonePlaceholder": {
+      "type": "string"
+    },
+    "brandMark": {
+      "type": "string"
+    },
+    "customerServiceTitle": {
+      "type": "string"
+    },
+    "customerServiceLinks": {
+      "type": "component",
+      "component": "shared.footer-link",
+      "repeatable": true
+    },
+    "aboutTitle": {
+      "type": "string"
+    },
+    "aboutDescription": {
+      "type": "text"
+    },
+    "aboutLinks": {
+      "type": "component",
+      "component": "shared.footer-link",
+      "repeatable": true
+    },
+    "advisorImage": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": ["images"]
     },
     "socialLinks": {
       "type": "component",
-      "component": "shared.footer-link",
+      "component": "shared.footer-social-link",
       "repeatable": true
     },
-    "moreTitle": {
+    "localeText": {
       "type": "string"
     },
-    "moreLinks": {
+    "copyright": {
+      "type": "string"
+    },
+    "legalLinks": {
       "type": "component",
       "component": "shared.footer-link",
       "repeatable": true
-    },
-    "followTitle": {
-      "type": "string"
-    },
-    "followLinks": {
-      "type": "component",
-      "component": "shared.footer-link",
-      "repeatable": true
-    },
-    "backToTopLabel": {
-      "type": "string"
-    },
-    "copyrightText": {
-      "type": "string"
-    },
-    "termsLabel": {
-      "type": "string"
-    },
-    "termsUrl": {
-      "type": "string"
     }
   },
   "config": {}

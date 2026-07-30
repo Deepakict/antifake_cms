@@ -1,0 +1,17 @@
+{
+  "collectionName": "components_shared_footer_social_links",
+  "info": {
+    "displayName": "FooterSocialLink"
+  },
+  "options": {},
+  "attributes": {
+    "platform": {
+      "type": "enumeration",
+      "enum": ["tiktok", "instagram", "facebook", "twitter", "youtube"]
+    },
+    "url": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

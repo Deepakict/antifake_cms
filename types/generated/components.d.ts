@@ -624,17 +624,38 @@ export interface SharedFooterSection extends Struct.ComponentSchema {
     displayName: 'FooterSection';
   };
   attributes: {
-    backToTopLabel: Schema.Attribute.String;
-    copyrightText: Schema.Attribute.String;
-    followLinks: Schema.Attribute.Component<'shared.footer-link', true>;
-    followTitle: Schema.Attribute.String;
-    moreLinks: Schema.Attribute.Component<'shared.footer-link', true>;
-    moreTitle: Schema.Attribute.String;
-    shopTitle: Schema.Attribute.String;
-    socialLinks: Schema.Attribute.Component<'shared.footer-link', true>;
-    tagline: Schema.Attribute.Text;
-    termsLabel: Schema.Attribute.String;
-    termsUrl: Schema.Attribute.String;
+    aboutDescription: Schema.Attribute.Text;
+    aboutLinks: Schema.Attribute.Component<'shared.footer-link', true>;
+    aboutTitle: Schema.Attribute.String;
+    advisorImage: Schema.Attribute.Media<'images'>;
+    brandMark: Schema.Attribute.String;
+    copyright: Schema.Attribute.String;
+    customerServiceLinks: Schema.Attribute.Component<
+      'shared.footer-link',
+      true
+    >;
+    customerServiceTitle: Schema.Attribute.String;
+    emailPlaceholder: Schema.Attribute.String;
+    legalLinks: Schema.Attribute.Component<'shared.footer-link', true>;
+    localeText: Schema.Attribute.String;
+    newsletterDisclaimer: Schema.Attribute.Text;
+    newsletterHeadline: Schema.Attribute.String;
+    newsletterSubtext: Schema.Attribute.Text;
+    phonePlaceholder: Schema.Attribute.String;
+    socialLinks: Schema.Attribute.Component<'shared.footer-social-link', true>;
+  };
+}
+
+export interface SharedFooterSocialLink extends Struct.ComponentSchema {
+  collectionName: 'components_shared_footer_social_links';
+  info: {
+    displayName: 'FooterSocialLink';
+  };
+  attributes: {
+    platform: Schema.Attribute.Enumeration<
+      ['tiktok', 'instagram', 'facebook', 'twitter', 'youtube']
+    >;
+    url: Schema.Attribute.String;
   };
 }
 
@@ -862,6 +883,7 @@ declare module '@strapi/strapi' {
       'shared.card-item': SharedCardItem;
       'shared.footer-link': SharedFooterLink;
       'shared.footer-section': SharedFooterSection;
+      'shared.footer-social-link': SharedFooterSocialLink;
       'shared.image-block': SharedImageBlock;
       'shared.image-contant': SharedImageContant;
       'shared.item-list': SharedItemList;
