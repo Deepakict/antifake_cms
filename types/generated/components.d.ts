@@ -571,6 +571,7 @@ export interface ProductRoutineStep extends Struct.ComponentSchema {
     routine: Schema.Attribute.String;
     subtitle: Schema.Attribute.String;
     title: Schema.Attribute.String;
+    whatItIs: Schema.Attribute.String;
   };
 }
 
@@ -689,6 +690,7 @@ export interface SharedItemList extends Struct.ComponentSchema {
     displayName: 'ItemList';
   };
   attributes: {
+    additionalDescription: Schema.Attribute.RichText;
     description: Schema.Attribute.RichText;
     icon: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
     title: Schema.Attribute.String;

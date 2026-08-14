@@ -14,6 +14,9 @@
     "subtitle": {
       "type": "string"
     },
+    "whatItIs": {
+      "type": "string"
+    },
     "benefits": {
       "type": "component",
       "component": "product.routine-benefit",

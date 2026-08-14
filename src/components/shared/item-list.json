@@ -20,6 +20,9 @@
     },
     "description": {
       "type": "richtext"
+    },
+    "additionalDescription": {
+      "type": "richtext"
     }
   },
   "config": {}
